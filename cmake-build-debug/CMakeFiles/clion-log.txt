@@ -1,0 +1,11 @@
+"/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.72/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest
+    -- src/MaxSubseqAlg.cpp will be compiled to bin/MaxSubseqAlg
+    -- src/MaxSubseqTest.cpp will be compiled to bin/MaxSubseqTest
+    -- src/InsertSort.cpp will be compiled to bin/InsertSort
+    -- src/MergeSort.cpp will be compiled to bin/MergeSort
+    -- src/QuickSort.cpp will be compiled to bin/QuickSort
+    -- src/SortTest.cpp will be compiled to bin/SortTest
+    -- src/CMakeCXXCompilerId.cpp will be compiled to bin/CMakeCXXCompilerId
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug

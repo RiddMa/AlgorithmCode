@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqAlg.cpp
+MaxSubseqAlg.h
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqAlg.h
+
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqAlg.h
+
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqTest.cpp
+MaxSubseqTest.h
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqTest.h
+MaxSubseqAlg.h
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqAlg.h
+
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task1/MaxSubseqTest.h
+iostream
+-
+Windows.h
+-
+profileapi.h
+-
+functional
+-
+stdlib.h
+-
+ctime
+-
+
+/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
+
