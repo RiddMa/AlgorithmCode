@@ -2,6 +2,7 @@
 // Created by 马嘉骥 on 2020/9/28.
 //
 
+#include <climits>
 #include "MaxSubseqTest.h"
 #include "MaxSubseqAlg.h"
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/Task2/MergeSort.cpp" "/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.o"
+  "G:/Courseware/Algorithm/AlgorithmFinal/Task2/MergeSort.cpp" "G:/Courseware/Algorithm/AlgorithmFinal/cmake-build-debug/CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

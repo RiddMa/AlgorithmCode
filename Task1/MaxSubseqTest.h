@@ -6,7 +6,8 @@
 #define FINALTEST_MAXSUBSEQTEST_H
 #include<iostream>
 #include<Windows.h>
-#include<profileapi.h>
+//#include<profileapi.h>
+#include<profile.h>
 #include<functional>
 #include<stdlib.h>
 #include<ctime>

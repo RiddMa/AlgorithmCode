@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.o"
-  "MergeSort"
+  "CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.obj"
+  "MergeSort.exe"
+  "MergeSort.exe.manifest"
   "MergeSort.pdb"
+  "libMergeSort.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
