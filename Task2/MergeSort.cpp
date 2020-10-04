@@ -23,8 +23,10 @@ void Merge(int A[], int B[], int left, int mid, int right)
             B[k++] = A[q];
     }
     else
+    {
         for (int q = i; q <= mid; q++)
             B[k++] = A[q];
+    }
 }
 
 void MergePass(int A[], int B[], int step, int n)
@@ -37,8 +39,10 @@ void MergePass(int A[], int B[], int step, int n)
     if (i + step < n)
         Merge(A, B, i, i + step - 1, n - 1);
     else
+    {
         for (int j = i; j <= n - 1; j++)
             B[j] = A[j];
+    }
 }
 
 void MergeSort(int A[], int n)
@@ -48,8 +52,8 @@ void MergeSort(int A[], int n)
     {
         MergePass(A, B, step, n);
         step += step;
-        MergePass(B, A, step, n);
-        step += step;
+        //MergePass(B, A, step, n);
+        //step += step;
     }
 }
 

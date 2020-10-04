@@ -3,10 +3,3 @@
 
 CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
-CMakeFiles/CMakeCXXCompilerId.dir/Task1/MaxSubseqAlg.cpp.o: ../Task1/MaxSubseqAlg.cpp
-CMakeFiles/CMakeCXXCompilerId.dir/Task1/MaxSubseqAlg.cpp.o: ../Task1/MaxSubseqAlg.h
-
-CMakeFiles/CMakeCXXCompilerId.dir/Task1/MaxSubseqTest.cpp.o: ../Task1/MaxSubseqAlg.h
-CMakeFiles/CMakeCXXCompilerId.dir/Task1/MaxSubseqTest.cpp.o: ../Task1/MaxSubseqTest.cpp
-CMakeFiles/CMakeCXXCompilerId.dir/Task1/MaxSubseqTest.cpp.o: ../Task1/MaxSubseqTest.h
-
