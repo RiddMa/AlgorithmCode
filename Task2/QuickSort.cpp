@@ -1,8 +1,8 @@
 //
 // Created by 马嘉骥 on 2020/9/29.
 //
-
-#include "QuickSort.h"
+#undef _HAS_STD_BYTE
+#include "Header/QuickSort.h"
 
 extern PerfCounter pc;
 /*

@@ -1,7 +1,7 @@
 //
 // Created by 马嘉骥 on 2020/9/29.
 //
-
+#undef _HAS_STD_BYTE
 #ifndef FINALTEST_SORTTEST_H
 #define FINALTEST_SORTTEST_H
 
@@ -17,6 +17,12 @@
 #include "InsertionSort.h"
 #include "MergeSort.h"
 #include "QuickSort.h"
+
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif // _WIN32
 
 using namespace std;
 

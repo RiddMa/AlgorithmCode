@@ -1,10 +1,9 @@
 //
 // Created by 马嘉骥 on 2020/9/29.
 //
+#undef _HAS_STD_BYTE
+#include "Header/SortTest.h"
 
-#include "SortTest.h"
-#include <chrono>
-#include<thread>
 
 void RandListGen(int *arr, const long long size, int lower, int upper) {
     default_random_engine randE;
@@ -17,8 +16,17 @@ void RandListGen(int *arr, const long long size, int lower, int upper) {
 
 void PrintArray(int *arr, long long size) {
     for (long long i = 0; i < size; i++)
-        cout << arr[i] << "\t\t";
+        cout << arr[i] << "\t";
     cout << endl;
+}
+
+void SleepCP(int milliseconds) // 跨平台 sleep 函数
+{
+#ifdef _WIN32
+    Sleep(milliseconds);
+#else
+    usleep(milliseconds * 1000);
+#endif // _WIN32
 }
 
 void CorrectnessTest(int *arr, const long long size, int method, int lower, int upper) {
@@ -104,29 +112,30 @@ PerfCounter pc;
 int main() {
     long long size = 10;
     int *arr = new int[size];
+    /*
     CorrectnessTest(arr, size, 0, -100, 100);
     CorrectnessTest(arr, size, 0, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 0, INT_MAX, INT_MAX);
     CorrectnessTest(arr, size, 0, 0, 0);
 
     //sleep to refresh the random number generator engine's seed
-    std::this_thread::sleep_for(chrono::milliseconds(1000));
+    SleepCP(1000);
     CorrectnessTest(arr, size, 1, -100, 100);
     CorrectnessTest(arr, size, 1, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 1, INT_MAX, INT_MAX);
     CorrectnessTest(arr, size, 1, 0, 0);
 
     //sleep to refresh the random number generator engine's seed
-    this_thread::sleep_for(chrono::milliseconds(1000));
+    //this_thread::sleep_for(chrono::milliseconds(1000));
     CorrectnessTest(arr, size, 2, -100, 100);
     CorrectnessTest(arr, size, 2, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 2, INT_MAX, INT_MAX);
     CorrectnessTest(arr, size, 2, 0, 0);
-
+    */
 
     pc.CountClear();
-    PerfTest(arr, size, 0, INT_MIN, INT_MAX);
-
+    PerfTest(arr, size, 0, 0, 100);
+    PrintArray(arr,size);
     //RandListGen(arr, size, INT_MIN, INT_MAX);
     //MergeSort(arr, size, 0, size - 1);
     //cout << "OK" << endl;

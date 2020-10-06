@@ -1,8 +1,8 @@
 //
 // Created by 马嘉骥 on 2020/9/28.
 //
-
-#include "MergeSort.h"
+#undef _HAS_STD_BYTE
+#include "Header/MergeSort.h"
 
 extern PerfCounter pc;
 
@@ -75,6 +75,6 @@ void MergePass(int *arr, int left, int right) {
     }
 }
 
-void MergeSort(int *arr, int size, int left, int right) {
+void MergeSort(int *arr, long long size, int left, int right) {
     MergePass(arr, 0, size);
 }
