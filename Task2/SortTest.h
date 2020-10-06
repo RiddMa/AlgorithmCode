@@ -11,6 +11,7 @@
 #include <random>
 #include <chrono>
 #include <thread>
+#include <functional>
 
 #include "InsertionSort.h"
 #include "MergeSort.h"
@@ -32,9 +33,9 @@ void RandListGen(int (&arr)[SIZE], int lower, int upper) {
 }
 
 template<size_t SIZE>
-void printArray(int (&arr)[SIZE]) {
+void PrintArray(int (&arr)[SIZE]) {
     for (int i = 0; i < SIZE; i++)
-        cout << arr[i] << "\t";
+        cout << arr[i] << "\t\t";
     cout << endl;
 }
 
