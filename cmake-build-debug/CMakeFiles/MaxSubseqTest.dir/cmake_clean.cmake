@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MaxSubseqTest.dir/Task1/MaxSubseqTest.cpp.obj"
-  "MaxSubseqTest.exe"
-  "MaxSubseqTest.exe.manifest"
+  "CMakeFiles/MaxSubseqTest.dir/Task1/MaxSubseqTest.cpp.o"
+  "MaxSubseqTest"
   "MaxSubseqTest.pdb"
-  "libMaxSubseqTest.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

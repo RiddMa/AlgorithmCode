@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/InsertSort.dir/Task2/InsertSort.cpp.obj"
-  "InsertSort.exe"
-  "InsertSort.exe.manifest"
+  "CMakeFiles/InsertSort.dir/Task2/InsertSort.cpp.o"
+  "InsertSort"
   "InsertSort.pdb"
-  "libInsertSort.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

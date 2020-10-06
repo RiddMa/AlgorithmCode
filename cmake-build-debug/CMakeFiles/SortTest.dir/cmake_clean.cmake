@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/SortTest.dir/Task2/SortTest.cpp.obj"
-  "SortTest.exe"
-  "SortTest.exe.manifest"
+  "CMakeFiles/SortTest.dir/Task2/SortTest.cpp.o"
+  "SortTest"
   "SortTest.pdb"
-  "libSortTest.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

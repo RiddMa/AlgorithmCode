@@ -5,4 +5,9 @@
 #ifndef FINALTEST_QUICKSORT_H
 #define FINALTEST_QUICKSORT_H
 
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+
+using namespace std;
 #endif //FINALTEST_QUICKSORT_H

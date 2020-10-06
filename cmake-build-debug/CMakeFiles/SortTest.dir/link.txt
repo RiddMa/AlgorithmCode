@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\SortTest.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\SortTest.dir/objects.a @CMakeFiles\SortTest.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\SortTest.dir/objects.a -Wl,--no-whole-archive  -o SortTest.exe -Wl,--out-implib,libSortTest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\SortTest.dir\linklibs.rsp
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/SortTest.dir/Task2/SortTest.cpp.o  -o SortTest 
