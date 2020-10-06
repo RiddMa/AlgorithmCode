@@ -73,14 +73,7 @@ CMAKE_BINARY_DIR = /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTes
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/QuickSelect.dir/all
-all: CMakeFiles/SortTest.dir/all
-all: CMakeFiles/CMakeCXXCompilerId.dir/all
-all: CMakeFiles/InsertSort.dir/all
-all: CMakeFiles/QuickSort.dir/all
-all: CMakeFiles/MergeSort.dir/all
-all: CMakeFiles/MaxSubseqTest.dir/all
-all: CMakeFiles/MaxSubseqAlg.dir/all
+all: CMakeFiles/TSK2.dir/all
 
 .PHONY : all
 
@@ -90,232 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/QuickSelect.dir/clean
-clean: CMakeFiles/SortTest.dir/clean
-clean: CMakeFiles/CMakeCXXCompilerId.dir/clean
-clean: CMakeFiles/InsertSort.dir/clean
-clean: CMakeFiles/QuickSort.dir/clean
-clean: CMakeFiles/MergeSort.dir/clean
-clean: CMakeFiles/MaxSubseqTest.dir/clean
-clean: CMakeFiles/MaxSubseqAlg.dir/clean
+clean: CMakeFiles/TSK2.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/QuickSelect.dir
+# Target rules for target CMakeFiles/TSK2.dir
 
 # All Build rule for target.
-CMakeFiles/QuickSelect.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target QuickSelect"
-.PHONY : CMakeFiles/QuickSelect.dir/all
+CMakeFiles/TSK2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target TSK2"
+.PHONY : CMakeFiles/TSK2.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/QuickSelect.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QuickSelect.dir/all
+CMakeFiles/TSK2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TSK2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/QuickSelect.dir/rule
+.PHONY : CMakeFiles/TSK2.dir/rule
 
 # Convenience name for target.
-QuickSelect: CMakeFiles/QuickSelect.dir/rule
+TSK2: CMakeFiles/TSK2.dir/rule
 
-.PHONY : QuickSelect
-
-# clean rule for target.
-CMakeFiles/QuickSelect.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/clean
-.PHONY : CMakeFiles/QuickSelect.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/SortTest.dir
-
-# All Build rule for target.
-CMakeFiles/SortTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target SortTest"
-.PHONY : CMakeFiles/SortTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/SortTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SortTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/SortTest.dir/rule
-
-# Convenience name for target.
-SortTest: CMakeFiles/SortTest.dir/rule
-
-.PHONY : SortTest
+.PHONY : TSK2
 
 # clean rule for target.
-CMakeFiles/SortTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/clean
-.PHONY : CMakeFiles/SortTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/CMakeCXXCompilerId.dir
-
-# All Build rule for target.
-CMakeFiles/CMakeCXXCompilerId.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target CMakeCXXCompilerId"
-.PHONY : CMakeFiles/CMakeCXXCompilerId.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/CMakeCXXCompilerId.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CMakeCXXCompilerId.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/CMakeCXXCompilerId.dir/rule
-
-# Convenience name for target.
-CMakeCXXCompilerId: CMakeFiles/CMakeCXXCompilerId.dir/rule
-
-.PHONY : CMakeCXXCompilerId
-
-# clean rule for target.
-CMakeFiles/CMakeCXXCompilerId.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/clean
-.PHONY : CMakeFiles/CMakeCXXCompilerId.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/InsertSort.dir
-
-# All Build rule for target.
-CMakeFiles/InsertSort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target InsertSort"
-.PHONY : CMakeFiles/InsertSort.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/InsertSort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/InsertSort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/InsertSort.dir/rule
-
-# Convenience name for target.
-InsertSort: CMakeFiles/InsertSort.dir/rule
-
-.PHONY : InsertSort
-
-# clean rule for target.
-CMakeFiles/InsertSort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/clean
-.PHONY : CMakeFiles/InsertSort.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/QuickSort.dir
-
-# All Build rule for target.
-CMakeFiles/QuickSort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target QuickSort"
-.PHONY : CMakeFiles/QuickSort.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/QuickSort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QuickSort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/QuickSort.dir/rule
-
-# Convenience name for target.
-QuickSort: CMakeFiles/QuickSort.dir/rule
-
-.PHONY : QuickSort
-
-# clean rule for target.
-CMakeFiles/QuickSort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/clean
-.PHONY : CMakeFiles/QuickSort.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MergeSort.dir
-
-# All Build rule for target.
-CMakeFiles/MergeSort.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target MergeSort"
-.PHONY : CMakeFiles/MergeSort.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MergeSort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MergeSort.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/MergeSort.dir/rule
-
-# Convenience name for target.
-MergeSort: CMakeFiles/MergeSort.dir/rule
-
-.PHONY : MergeSort
-
-# clean rule for target.
-CMakeFiles/MergeSort.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/clean
-.PHONY : CMakeFiles/MergeSort.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MaxSubseqTest.dir
-
-# All Build rule for target.
-CMakeFiles/MaxSubseqTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target MaxSubseqTest"
-.PHONY : CMakeFiles/MaxSubseqTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MaxSubseqTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MaxSubseqTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/MaxSubseqTest.dir/rule
-
-# Convenience name for target.
-MaxSubseqTest: CMakeFiles/MaxSubseqTest.dir/rule
-
-.PHONY : MaxSubseqTest
-
-# clean rule for target.
-CMakeFiles/MaxSubseqTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/clean
-.PHONY : CMakeFiles/MaxSubseqTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MaxSubseqAlg.dir
-
-# All Build rule for target.
-CMakeFiles/MaxSubseqAlg.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target MaxSubseqAlg"
-.PHONY : CMakeFiles/MaxSubseqAlg.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MaxSubseqAlg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MaxSubseqAlg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/MaxSubseqAlg.dir/rule
-
-# Convenience name for target.
-MaxSubseqAlg: CMakeFiles/MaxSubseqAlg.dir/rule
-
-.PHONY : MaxSubseqAlg
-
-# clean rule for target.
-CMakeFiles/MaxSubseqAlg.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/clean
-.PHONY : CMakeFiles/MaxSubseqAlg.dir/clean
+CMakeFiles/TSK2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/clean
+.PHONY : CMakeFiles/TSK2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

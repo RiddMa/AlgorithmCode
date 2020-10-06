@@ -76,17 +76,6 @@ CMAKE_BINARY_DIR = /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTes
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.72/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -97,6 +86,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.72/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -131,216 +131,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named QuickSelect
+# Target rules for targets named TSK2
 
 # Build rule for target.
-QuickSelect: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QuickSelect
-.PHONY : QuickSelect
+TSK2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TSK2
+.PHONY : TSK2
 
 # fast build rule for target.
-QuickSelect/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/build
-.PHONY : QuickSelect/fast
+TSK2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/build
+.PHONY : TSK2/fast
 
-#=============================================================================
-# Target rules for targets named SortTest
+Task2/InsertionSort.o: Task2/InsertionSort.cpp.o
 
-# Build rule for target.
-SortTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SortTest
-.PHONY : SortTest
-
-# fast build rule for target.
-SortTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/build
-.PHONY : SortTest/fast
-
-#=============================================================================
-# Target rules for targets named CMakeCXXCompilerId
-
-# Build rule for target.
-CMakeCXXCompilerId: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeCXXCompilerId
-.PHONY : CMakeCXXCompilerId
-
-# fast build rule for target.
-CMakeCXXCompilerId/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/build
-.PHONY : CMakeCXXCompilerId/fast
-
-#=============================================================================
-# Target rules for targets named InsertSort
-
-# Build rule for target.
-InsertSort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 InsertSort
-.PHONY : InsertSort
-
-# fast build rule for target.
-InsertSort/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/build
-.PHONY : InsertSort/fast
-
-#=============================================================================
-# Target rules for targets named QuickSort
-
-# Build rule for target.
-QuickSort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QuickSort
-.PHONY : QuickSort
-
-# fast build rule for target.
-QuickSort/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/build
-.PHONY : QuickSort/fast
-
-#=============================================================================
-# Target rules for targets named MergeSort
-
-# Build rule for target.
-MergeSort: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MergeSort
-.PHONY : MergeSort
-
-# fast build rule for target.
-MergeSort/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/build
-.PHONY : MergeSort/fast
-
-#=============================================================================
-# Target rules for targets named MaxSubseqTest
-
-# Build rule for target.
-MaxSubseqTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MaxSubseqTest
-.PHONY : MaxSubseqTest
-
-# fast build rule for target.
-MaxSubseqTest/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/build
-.PHONY : MaxSubseqTest/fast
-
-#=============================================================================
-# Target rules for targets named MaxSubseqAlg
-
-# Build rule for target.
-MaxSubseqAlg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MaxSubseqAlg
-.PHONY : MaxSubseqAlg
-
-# fast build rule for target.
-MaxSubseqAlg/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/build
-.PHONY : MaxSubseqAlg/fast
-
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.o: CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.o
+.PHONY : Task2/InsertionSort.o
 
 # target to build an object file
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+Task2/InsertionSort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/InsertionSort.cpp.o
+.PHONY : Task2/InsertionSort.cpp.o
 
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.i: CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+Task2/InsertionSort.i: Task2/InsertionSort.cpp.i
 
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.i
-
-# target to preprocess a source file
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
-
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.s: CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.s
-
-# target to generate assembly for a file
-CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CMakeCXXCompilerId.dir/build.make CMakeFiles/CMakeCXXCompilerId.dir/CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-.PHONY : CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
-
-Task1/MaxSubseqAlg.o: Task1/MaxSubseqAlg.cpp.o
-
-.PHONY : Task1/MaxSubseqAlg.o
-
-# target to build an object file
-Task1/MaxSubseqAlg.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/Task1/MaxSubseqAlg.cpp.o
-.PHONY : Task1/MaxSubseqAlg.cpp.o
-
-Task1/MaxSubseqAlg.i: Task1/MaxSubseqAlg.cpp.i
-
-.PHONY : Task1/MaxSubseqAlg.i
+.PHONY : Task2/InsertionSort.i
 
 # target to preprocess a source file
-Task1/MaxSubseqAlg.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/Task1/MaxSubseqAlg.cpp.i
-.PHONY : Task1/MaxSubseqAlg.cpp.i
+Task2/InsertionSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/InsertionSort.cpp.i
+.PHONY : Task2/InsertionSort.cpp.i
 
-Task1/MaxSubseqAlg.s: Task1/MaxSubseqAlg.cpp.s
+Task2/InsertionSort.s: Task2/InsertionSort.cpp.s
 
-.PHONY : Task1/MaxSubseqAlg.s
-
-# target to generate assembly for a file
-Task1/MaxSubseqAlg.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqAlg.dir/build.make CMakeFiles/MaxSubseqAlg.dir/Task1/MaxSubseqAlg.cpp.s
-.PHONY : Task1/MaxSubseqAlg.cpp.s
-
-Task1/MaxSubseqTest.o: Task1/MaxSubseqTest.cpp.o
-
-.PHONY : Task1/MaxSubseqTest.o
-
-# target to build an object file
-Task1/MaxSubseqTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/Task1/MaxSubseqTest.cpp.o
-.PHONY : Task1/MaxSubseqTest.cpp.o
-
-Task1/MaxSubseqTest.i: Task1/MaxSubseqTest.cpp.i
-
-.PHONY : Task1/MaxSubseqTest.i
-
-# target to preprocess a source file
-Task1/MaxSubseqTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/Task1/MaxSubseqTest.cpp.i
-.PHONY : Task1/MaxSubseqTest.cpp.i
-
-Task1/MaxSubseqTest.s: Task1/MaxSubseqTest.cpp.s
-
-.PHONY : Task1/MaxSubseqTest.s
+.PHONY : Task2/InsertionSort.s
 
 # target to generate assembly for a file
-Task1/MaxSubseqTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MaxSubseqTest.dir/build.make CMakeFiles/MaxSubseqTest.dir/Task1/MaxSubseqTest.cpp.s
-.PHONY : Task1/MaxSubseqTest.cpp.s
-
-Task2/InsertSort.o: Task2/InsertSort.cpp.o
-
-.PHONY : Task2/InsertSort.o
-
-# target to build an object file
-Task2/InsertSort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/Task2/InsertSort.cpp.o
-.PHONY : Task2/InsertSort.cpp.o
-
-Task2/InsertSort.i: Task2/InsertSort.cpp.i
-
-.PHONY : Task2/InsertSort.i
-
-# target to preprocess a source file
-Task2/InsertSort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/Task2/InsertSort.cpp.i
-.PHONY : Task2/InsertSort.cpp.i
-
-Task2/InsertSort.s: Task2/InsertSort.cpp.s
-
-.PHONY : Task2/InsertSort.s
-
-# target to generate assembly for a file
-Task2/InsertSort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/InsertSort.dir/build.make CMakeFiles/InsertSort.dir/Task2/InsertSort.cpp.s
-.PHONY : Task2/InsertSort.cpp.s
+Task2/InsertionSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/InsertionSort.cpp.s
+.PHONY : Task2/InsertionSort.cpp.s
 
 Task2/MergeSort.o: Task2/MergeSort.cpp.o
 
@@ -348,7 +176,7 @@ Task2/MergeSort.o: Task2/MergeSort.cpp.o
 
 # target to build an object file
 Task2/MergeSort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/MergeSort.cpp.o
 .PHONY : Task2/MergeSort.cpp.o
 
 Task2/MergeSort.i: Task2/MergeSort.cpp.i
@@ -357,7 +185,7 @@ Task2/MergeSort.i: Task2/MergeSort.cpp.i
 
 # target to preprocess a source file
 Task2/MergeSort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/MergeSort.cpp.i
 .PHONY : Task2/MergeSort.cpp.i
 
 Task2/MergeSort.s: Task2/MergeSort.cpp.s
@@ -366,7 +194,7 @@ Task2/MergeSort.s: Task2/MergeSort.cpp.s
 
 # target to generate assembly for a file
 Task2/MergeSort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MergeSort.dir/build.make CMakeFiles/MergeSort.dir/Task2/MergeSort.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/MergeSort.cpp.s
 .PHONY : Task2/MergeSort.cpp.s
 
 Task2/QuickSort.o: Task2/QuickSort.cpp.o
@@ -375,7 +203,7 @@ Task2/QuickSort.o: Task2/QuickSort.cpp.o
 
 # target to build an object file
 Task2/QuickSort.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/Task2/QuickSort.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/QuickSort.cpp.o
 .PHONY : Task2/QuickSort.cpp.o
 
 Task2/QuickSort.i: Task2/QuickSort.cpp.i
@@ -384,7 +212,7 @@ Task2/QuickSort.i: Task2/QuickSort.cpp.i
 
 # target to preprocess a source file
 Task2/QuickSort.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/Task2/QuickSort.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/QuickSort.cpp.i
 .PHONY : Task2/QuickSort.cpp.i
 
 Task2/QuickSort.s: Task2/QuickSort.cpp.s
@@ -393,7 +221,7 @@ Task2/QuickSort.s: Task2/QuickSort.cpp.s
 
 # target to generate assembly for a file
 Task2/QuickSort.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSort.dir/build.make CMakeFiles/QuickSort.dir/Task2/QuickSort.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/QuickSort.cpp.s
 .PHONY : Task2/QuickSort.cpp.s
 
 Task2/SortTest.o: Task2/SortTest.cpp.o
@@ -402,7 +230,7 @@ Task2/SortTest.o: Task2/SortTest.cpp.o
 
 # target to build an object file
 Task2/SortTest.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/Task2/SortTest.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/SortTest.cpp.o
 .PHONY : Task2/SortTest.cpp.o
 
 Task2/SortTest.i: Task2/SortTest.cpp.i
@@ -411,7 +239,7 @@ Task2/SortTest.i: Task2/SortTest.cpp.i
 
 # target to preprocess a source file
 Task2/SortTest.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/Task2/SortTest.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/SortTest.cpp.i
 .PHONY : Task2/SortTest.cpp.i
 
 Task2/SortTest.s: Task2/SortTest.cpp.s
@@ -420,35 +248,8 @@ Task2/SortTest.s: Task2/SortTest.cpp.s
 
 # target to generate assembly for a file
 Task2/SortTest.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SortTest.dir/build.make CMakeFiles/SortTest.dir/Task2/SortTest.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/Task2/SortTest.cpp.s
 .PHONY : Task2/SortTest.cpp.s
-
-Task3/QuickSelect.o: Task3/QuickSelect.cpp.o
-
-.PHONY : Task3/QuickSelect.o
-
-# target to build an object file
-Task3/QuickSelect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/Task3/QuickSelect.cpp.o
-.PHONY : Task3/QuickSelect.cpp.o
-
-Task3/QuickSelect.i: Task3/QuickSelect.cpp.i
-
-.PHONY : Task3/QuickSelect.i
-
-# target to preprocess a source file
-Task3/QuickSelect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/Task3/QuickSelect.cpp.i
-.PHONY : Task3/QuickSelect.cpp.i
-
-Task3/QuickSelect.s: Task3/QuickSelect.cpp.s
-
-.PHONY : Task3/QuickSelect.s
-
-# target to generate assembly for a file
-Task3/QuickSelect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QuickSelect.dir/build.make CMakeFiles/QuickSelect.dir/Task3/QuickSelect.cpp.s
-.PHONY : Task3/QuickSelect.cpp.s
 
 # Help Target
 help:
@@ -458,26 +259,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... CMakeCXXCompilerId"
-	@echo "... InsertSort"
-	@echo "... MaxSubseqAlg"
-	@echo "... MaxSubseqTest"
-	@echo "... MergeSort"
-	@echo "... QuickSelect"
-	@echo "... QuickSort"
-	@echo "... SortTest"
-	@echo "... CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.o"
-	@echo "... CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.i"
-	@echo "... CMakeFiles/3.17.3/CompilerIdCXX/CMakeCXXCompilerId.s"
-	@echo "... Task1/MaxSubseqAlg.o"
-	@echo "... Task1/MaxSubseqAlg.i"
-	@echo "... Task1/MaxSubseqAlg.s"
-	@echo "... Task1/MaxSubseqTest.o"
-	@echo "... Task1/MaxSubseqTest.i"
-	@echo "... Task1/MaxSubseqTest.s"
-	@echo "... Task2/InsertSort.o"
-	@echo "... Task2/InsertSort.i"
-	@echo "... Task2/InsertSort.s"
+	@echo "... TSK2"
+	@echo "... Task2/InsertionSort.o"
+	@echo "... Task2/InsertionSort.i"
+	@echo "... Task2/InsertionSort.s"
 	@echo "... Task2/MergeSort.o"
 	@echo "... Task2/MergeSort.i"
 	@echo "... Task2/MergeSort.s"
@@ -487,9 +272,6 @@ help:
 	@echo "... Task2/SortTest.o"
 	@echo "... Task2/SortTest.i"
 	@echo "... Task2/SortTest.s"
-	@echo "... Task3/QuickSelect.o"
-	@echo "... Task3/QuickSelect.i"
-	@echo "... Task3/QuickSelect.s"
 .PHONY : help
 
 

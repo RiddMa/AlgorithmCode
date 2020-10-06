@@ -39,5 +39,21 @@ void PrintArray(int (&arr)[SIZE]) {
     cout << endl;
 }
 
+class CompareCounter {
+private:
+    long long Count;
+public:
+    void CountInc() {
+        Count++;
+    }
+
+    void CountClear() {
+        Count = 0;
+    }
+
+    long long GetCount() {
+        return Count;
+    }
+};
 
 #endif //FINALTEST_SORTTEST_H

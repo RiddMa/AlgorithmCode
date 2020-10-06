@@ -15,17 +15,17 @@ void CorrectnessTest(int (&arr)[SIZE], int method, int lower, int upper) {
     PrintArray(arr);
     switch (method) {
         case 0: {
-            InsertionSort(sortedArr);
+            InsertionSort(sortedArr, SIZE);
             cout << "Insertion sorted array:" << endl;
             break;
         }
         case 1: {
-            MergeSort(sortedArr, 0, SIZE - 1);
+            MergeSort(sortedArr, SIZE, 0, SIZE - 1);
             cout << "Merge sorted array:" << endl;
             break;
         }
         case 2: {
-            QuickSort(sortedArr, 0, SIZE - 1);
+            QuickSort(sortedArr, SIZE, 0, SIZE - 1);
             cout << "Quick sorted array:" << endl;
             break;
         }
@@ -48,8 +48,7 @@ void CorrectnessTest(int (&arr)[SIZE], int method, int lower, int upper) {
 //std::function<void(int[SIZE],int ,int)>func;
 typedef std::function<void(int[])> testFunc;
 
-template<size_t SIZE>
-void PerfTest(int (&arr)[SIZE], int method, int lower, int upper) {
+void PerfTest(int *arr, int SIZE, int method, int lower, int upper) {
     //RandListGen(arr, lower, upper);
     int sortedArr[SIZE];
     for (int i = 0; i < SIZE; i++) {
@@ -58,13 +57,13 @@ void PerfTest(int (&arr)[SIZE], int method, int lower, int upper) {
     auto start = chrono::system_clock::now();
     switch (method) {
         case 0:
-            InsertionSort(sortedArr);
+            InsertionSort(sortedArr, SIZE);
             break;
         case 1:
-            MergeSort(sortedArr, 0, SIZE - 1);
+            MergeSort(sortedArr, SIZE, 0, SIZE - 1);
             break;
         case 2:
-            QuickSort(sortedArr, 0, SIZE - 1);
+            QuickSort(sortedArr, SIZE, 0, SIZE - 1);
             break;
     }
     auto end = chrono::system_clock::now();
@@ -105,8 +104,12 @@ int main() {
     CorrectnessTest(arr, 2, INT_MAX, INT_MAX);
     CorrectnessTest(arr, 2, 0, 0);
     */
-    int arr[10000];
-    PerfTest(arr, 0, 0, 100);
-    PerfTest(arr, 1, 0, 100);
-    PerfTest(arr, 2, 0, 100);
+    int SIZE = 10000;
+    int arr[SIZE];
+    CompareCounter cc;
+    cc.CountClear();
+    PerfTest(arr, SIZE, 0, 0, 100);
+    cout<<cc.GetCount()<<endl;
+    PerfTest(arr, SIZE, 1, 0, 100);
+    PerfTest(arr, SIZE, 2, 0, 100);
 }

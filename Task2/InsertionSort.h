@@ -7,9 +7,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+
+#include "SortTest.h"
 using namespace std;
-
-
+/*
 template<size_t SIZE>
 void InsertionSort(int (&arr)[SIZE]) {
     for (int i = 1; i < SIZE; i++) {
@@ -17,8 +18,10 @@ void InsertionSort(int (&arr)[SIZE]) {
         int j;
         for (j = i - 1; j >= 0 && arr[j] > tmp; j--) {
             arr[j+1] = arr[j];
+
         }
         arr[j+1] = tmp;
     }
-}
+}*/
+void InsertionSort(int *arr, long long SIZE);
 #endif //FINALTEST_INSERTIONSORT_H
