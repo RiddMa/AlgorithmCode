@@ -12,5 +12,5 @@
 
 using namespace std;
 
-void QuickSort(int *arr, int SIZE, int left, int right);
+void QuickSort(int *arr, long long size, int left, int right);
 #endif //FINALTEST_QUICKSORT_H

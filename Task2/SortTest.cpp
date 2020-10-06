@@ -3,11 +3,13 @@
 //
 
 #include "SortTest.h"
+#include <chrono>
+#include<thread>
 
 void RandListGen(int *arr, const long long size, int lower, int upper) {
     default_random_engine randE;
     uniform_int_distribution<int> u(lower, upper);
-    randE.seed(time(0));
+    randE.seed(time(nullptr));
     for (long long i = 0; i < size; i++) {
         arr[i] = u(randE);
     }
@@ -19,9 +21,9 @@ void PrintArray(int *arr, long long size) {
     cout << endl;
 }
 
-void CorrectnessTest(int *arr,const long long size, int method, int lower, int upper) {
+void CorrectnessTest(int *arr, const long long size, int method, int lower, int upper) {
     RandListGen(arr, size, lower, upper);
-    int sortedArr[size];
+    int *sortedArr = new int[size];
     for (long long i = 0; i < size; i++) {
         sortedArr[i] = arr[i];
     }
@@ -59,9 +61,9 @@ void CorrectnessTest(int *arr,const long long size, int method, int lower, int u
 }
 
 void PerfTest(int *arr, long long size, int method, int lower, int upper) {
-    //RandListGen(arr, lower, upper);
+    RandListGen(arr, size, lower, upper);
     extern PerfCounter pc;
-    int sortedArr[size];
+    int *sortedArr = new int[size];
     for (long long i = 0; i < size; i++) {
         sortedArr[i] = arr[i];
     }
@@ -100,35 +102,34 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
 PerfCounter pc;
 
 int main() {
-    /*
-    CorrectnessTest(arr, 0, -100, 100);
-    CorrectnessTest(arr, 0, INT_MIN, INT_MIN);
-    CorrectnessTest(arr, 0, INT_MAX, INT_MAX);
-    CorrectnessTest(arr, 0, 0, 0);
-
-    //sleep to refresh the random number generator engine's seed
-    this_thread::sleep_for(chrono::milliseconds(1000));
-    CorrectnessTest(arr, 1, -100, 100);
-    CorrectnessTest(arr, 1, INT_MIN, INT_MIN);
-    CorrectnessTest(arr, 1, INT_MAX, INT_MAX);
-    CorrectnessTest(arr, 1, 0, 0);
-
-    //sleep to refresh the random number generator engine's seed
-    this_thread::sleep_for(chrono::milliseconds(1000));
-    CorrectnessTest(arr, 2, -100, 100);
-    CorrectnessTest(arr, 2, INT_MIN, INT_MIN);
-    CorrectnessTest(arr, 2, INT_MAX, INT_MAX);
-    CorrectnessTest(arr, 2, 0, 0);
-    */
     long long size = 10;
-    int arr[size];
+    int *arr = new int[size];
+    CorrectnessTest(arr, size, 0, -100, 100);
+    CorrectnessTest(arr, size, 0, INT_MIN, INT_MIN);
+    CorrectnessTest(arr, size, 0, INT_MAX, INT_MAX);
+    CorrectnessTest(arr, size, 0, 0, 0);
+
+    //sleep to refresh the random number generator engine's seed
+    std::this_thread::sleep_for(chrono::milliseconds(1000));
+    CorrectnessTest(arr, size, 1, -100, 100);
+    CorrectnessTest(arr, size, 1, INT_MIN, INT_MIN);
+    CorrectnessTest(arr, size, 1, INT_MAX, INT_MAX);
+    CorrectnessTest(arr, size, 1, 0, 0);
+
+    //sleep to refresh the random number generator engine's seed
+    this_thread::sleep_for(chrono::milliseconds(1000));
+    CorrectnessTest(arr, size, 2, -100, 100);
+    CorrectnessTest(arr, size, 2, INT_MIN, INT_MIN);
+    CorrectnessTest(arr, size, 2, INT_MAX, INT_MAX);
+    CorrectnessTest(arr, size, 2, 0, 0);
+
 
     pc.CountClear();
-    //PerfTest(arr, size, 0, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 0, INT_MIN, INT_MAX);
 
-    RandListGen(arr, size, INT_MIN, INT_MAX);
-    MergeSort(arr,size,0,size-1);
-    cout<<"OK"<<endl;
-    //PerfTest(arr, size, 1, -10000, 10000);
+    //RandListGen(arr, size, INT_MIN, INT_MAX);
+    //MergeSort(arr, size, 0, size - 1);
+    //cout << "OK" << endl;
+    PerfTest(arr, size, 1, -10000, 10000);
     //PerfTest(arr, size, 2, INT_MIN, INT_MAX);
 }

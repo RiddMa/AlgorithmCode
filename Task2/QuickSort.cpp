@@ -15,7 +15,7 @@ void Swap(int &a, int &b) {
     pc.MoveInc(1);
 }
 
-void Select(int *arr, int SIZE, int left, int right, int k) {
+void Select(int *arr, int size, int left, int right, int k) {
 
 }
 
@@ -24,7 +24,7 @@ void Select(int *arr, int SIZE, int left, int right, int k) {
  * at its correct position in sorted array, and places all smaller
  * (smaller than pivot) to left of pivot and all greater elements to right of pivot
  */
-int Partition(int *arr, int SIZE, int left, int right) {
+int Partition(int *arr, long long size, int left, int right) {
     int pivot = arr[right]; // pivot
     int i = (left - 1); // Index of smaller element
 
@@ -40,16 +40,16 @@ int Partition(int *arr, int SIZE, int left, int right) {
 }
 
 
-void QuickSort(int *arr, int SIZE, int left, int right) {
+void QuickSort(int *arr, long long size, int left, int right) {
     if (left < right) {
         /* pi is partitioning index, arr[p] is now
         at right place */
-        int pi = Partition(arr, SIZE, left, right);
+        int pi = Partition(arr, size, left, right);
 
         // Separately sort elements before
         // partition and after partition
-        QuickSort(arr, SIZE, left, pi - 1);
-        QuickSort(arr, SIZE, pi + 1, right);
+        QuickSort(arr, size, left, pi - 1);
+        QuickSort(arr, size, pi + 1, right);
     }
 }
 
