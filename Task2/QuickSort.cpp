@@ -4,7 +4,7 @@
 
 #include "QuickSort.h"
 
-
+extern PerfCounter pc;
 /*
  * util func, swap two elements
  */
@@ -12,6 +12,7 @@ void Swap(int &a, int &b) {
     int t = a;
     a = b;
     b = t;
+    pc.MoveInc(1);
 }
 
 void Select(int *arr, int SIZE, int left, int right, int k) {

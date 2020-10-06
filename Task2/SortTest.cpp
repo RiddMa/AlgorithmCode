@@ -4,37 +4,51 @@
 
 #include "SortTest.h"
 
-template<size_t SIZE>
-void CorrectnessTest(int (&arr)[SIZE], int method, int lower, int upper) {
-    RandListGen(arr, lower, upper);
-    int sortedArr[SIZE];
-    for (int i = 0; i < SIZE; i++) {
+void RandListGen(int *arr, const long long size, int lower, int upper) {
+    default_random_engine randE;
+    uniform_int_distribution<int> u(lower, upper);
+    randE.seed(time(0));
+    for (long long i = 0; i < size; i++) {
+        arr[i] = u(randE);
+    }
+}
+
+void PrintArray(int *arr, long long size) {
+    for (long long i = 0; i < size; i++)
+        cout << arr[i] << "\t\t";
+    cout << endl;
+}
+
+void CorrectnessTest(int *arr,const long long size, int method, int lower, int upper) {
+    RandListGen(arr, size, lower, upper);
+    int sortedArr[size];
+    for (long long i = 0; i < size; i++) {
         sortedArr[i] = arr[i];
     }
     cout << "Generated source array:" << endl;
-    PrintArray(arr);
+    PrintArray(arr, size);
     switch (method) {
         case 0: {
-            InsertionSort(sortedArr, SIZE);
+            InsertionSort(sortedArr, size);
             cout << "Insertion sorted array:" << endl;
             break;
         }
         case 1: {
-            MergeSort(sortedArr, SIZE, 0, SIZE - 1);
+            MergeSort(sortedArr, size, 0, size - 1);
             cout << "Merge sorted array:" << endl;
             break;
         }
         case 2: {
-            QuickSort(sortedArr, SIZE, 0, SIZE - 1);
+            QuickSort(sortedArr, size, 0, size - 1);
             cout << "Quick sorted array:" << endl;
             break;
         }
     }
-    PrintArray(sortedArr);
+    PrintArray(sortedArr, size);
 
     //check if sort is correct
     int flag = 1;
-    for (int i = 0; i < SIZE - 1; i++) {
+    for (long long i = 0; i < size - 1; i++) {
         if (sortedArr[i] > sortedArr[i + 1])
             flag = 0;
     }
@@ -44,26 +58,25 @@ void CorrectnessTest(int (&arr)[SIZE], int method, int lower, int upper) {
         cout << "Sort failed." << endl << endl;
 }
 
-
-//std::function<void(int[SIZE],int ,int)>func;
-typedef std::function<void(int[])> testFunc;
-
-void PerfTest(int *arr, int SIZE, int method, int lower, int upper) {
+void PerfTest(int *arr, long long size, int method, int lower, int upper) {
     //RandListGen(arr, lower, upper);
-    int sortedArr[SIZE];
-    for (int i = 0; i < SIZE; i++) {
+    extern PerfCounter pc;
+    int sortedArr[size];
+    for (long long i = 0; i < size; i++) {
         sortedArr[i] = arr[i];
     }
+    pc.CountClear();
+
     auto start = chrono::system_clock::now();
     switch (method) {
         case 0:
-            InsertionSort(sortedArr, SIZE);
+            InsertionSort(sortedArr, size);
             break;
         case 1:
-            MergeSort(sortedArr, SIZE, 0, SIZE - 1);
+            MergeSort(sortedArr, size, 0, size - 1);
             break;
         case 2:
-            QuickSort(sortedArr, SIZE, 0, SIZE - 1);
+            QuickSort(sortedArr, size, 0, size - 1);
             break;
     }
     auto end = chrono::system_clock::now();
@@ -80,8 +93,11 @@ void PerfTest(int *arr, int SIZE, int method, int lower, int upper) {
             break;
     }
 
-    cout << "Time elapsed:" << duration.count() << "us." << endl;
+    cout << "Time elapsed: " << duration.count() << " us.\t" << endl;
+    cout << "Compare times: " << pc.GetCount() << "\tMove times: " << pc.GetMove() << endl;
 }
+
+PerfCounter pc;
 
 int main() {
     /*
@@ -104,12 +120,15 @@ int main() {
     CorrectnessTest(arr, 2, INT_MAX, INT_MAX);
     CorrectnessTest(arr, 2, 0, 0);
     */
-    int SIZE = 10000;
-    int arr[SIZE];
-    CompareCounter cc;
-    cc.CountClear();
-    PerfTest(arr, SIZE, 0, 0, 100);
-    cout<<cc.GetCount()<<endl;
-    PerfTest(arr, SIZE, 1, 0, 100);
-    PerfTest(arr, SIZE, 2, 0, 100);
+    long long size = 10;
+    int arr[size];
+
+    pc.CountClear();
+    //PerfTest(arr, size, 0, INT_MIN, INT_MAX);
+
+    RandListGen(arr, size, INT_MIN, INT_MAX);
+    MergeSort(arr,size,0,size-1);
+    cout<<"OK"<<endl;
+    //PerfTest(arr, size, 1, -10000, 10000);
+    //PerfTest(arr, size, 2, INT_MIN, INT_MAX);
 }

@@ -4,6 +4,7 @@
 
 #include "MergeSort.h"
 
+extern PerfCounter pc;
 
 // Merges two subarrays of arr[].
 // First subarray is arr[left..mid]
@@ -15,12 +16,12 @@ void Merge(int *arr, int left, int mid, int right) {
 
     /* create temp arrays */
     int L[n1], R[n2];
-
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
         L[i] = arr[left + i];
     for (j = 0; j < n2; j++)
         R[j] = arr[mid + 1 + j];
+    pc.MoveInc((long long) n1 + n2);
 
     /* Merge the temp arrays back into arr[left..right]*/
     i = 0; // Initial index of first subarray
@@ -34,6 +35,8 @@ void Merge(int *arr, int left, int mid, int right) {
             arr[k] = R[j];
             j++;
         }
+        pc.MoveInc(1);
+        pc.CountInc(1);
         k++;
     }
 
@@ -43,6 +46,7 @@ void Merge(int *arr, int left, int mid, int right) {
         arr[k] = L[i];
         i++;
         k++;
+        pc.MoveInc(1);
     }
 
     /* Copy the remaining elements of R[], if there
@@ -51,21 +55,26 @@ void Merge(int *arr, int left, int mid, int right) {
         arr[k] = R[j];
         j++;
         k++;
+        pc.MoveInc(1);
     }
 }
 
 /* left is for left index and right is right index of the
    sub-array of arr to be sorted */
-void MergeSort(int *arr, int SIZE, int left, int right) {
+void MergePass(int *arr, int left, int right) {
     if (left < right) {
         // Same as (left+right)/2, but avoids overflow for
         // large left and h
         int mid = left + (right - left) / 2;
 
         // Sort first and second halves
-        MergeSort(arr, SIZE, left, mid);
-        MergeSort(arr, SIZE, mid + 1, right);
+        MergePass(arr, left, mid);
+        MergePass(arr, mid + 1, right);
 
         Merge(arr, left, mid, right);
     }
+}
+
+void MergeSort(int *arr, int size, int left, int right) {
+    MergePass(arr, 0, size);
 }

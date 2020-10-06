@@ -8,9 +8,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include "SortTest.h"
 
 using namespace std;
 
-void MergeSort(int *arr, int SIZE, int left, int right);
+void MergeSort(int *arr, int size, int left, int right);
 
 #endif //FINALTEST_MERGESORT_H

@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include "SortTest.h"
 
 using namespace std;
 

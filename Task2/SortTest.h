@@ -12,6 +12,7 @@
 #include <chrono>
 #include <thread>
 #include <functional>
+#include <climits>
 
 #include "InsertionSort.h"
 #include "MergeSort.h"
@@ -22,29 +23,13 @@ using namespace std;
 /*
  * Utility functions
  */
-template<size_t SIZE>
-void RandListGen(int (&arr)[SIZE], int lower, int upper) {
-    default_random_engine randE;
-    uniform_int_distribution<int> u(lower, upper);
-    randE.seed(time(0));
-    for (int i = 0; i < SIZE; i++) {
-        arr[i] = u(randE);
-    }
-}
-
-template<size_t SIZE>
-void PrintArray(int (&arr)[SIZE]) {
-    for (int i = 0; i < SIZE; i++)
-        cout << arr[i] << "\t\t";
-    cout << endl;
-}
-
-class CompareCounter {
+class PerfCounter {
 private:
     long long Count;
+    long long Move;
 public:
-    void CountInc() {
-        Count++;
+    void CountInc(long long n) {
+        Count += n;
     }
 
     void CountClear() {
@@ -53,6 +38,18 @@ public:
 
     long long GetCount() {
         return Count;
+    }
+
+    void MoveInc(long long n) {
+        Move += n;
+    }
+
+    void MoveClear() {
+        Move = 0;
+    }
+
+    long long GetMove() {
+        return Move;
     }
 };
 
