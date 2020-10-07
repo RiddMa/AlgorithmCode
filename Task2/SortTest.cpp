@@ -2,8 +2,9 @@
 // Created by 马嘉骥 on 2020/9/29.
 //
 #undef _HAS_STD_BYTE
-#include "Header/SortTest.h"
 
+#include "Header/SortTest.h"
+#include<algorithm>
 
 void RandListGen(int *arr, const long long size, int lower, int upper) {
     default_random_engine randE;
@@ -110,7 +111,7 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
 PerfCounter pc;
 
 int main() {
-    long long size = 10;
+    long long size = 1000000;
     int *arr = new int[size];
     /*
     CorrectnessTest(arr, size, 0, -100, 100);
@@ -126,19 +127,24 @@ int main() {
     CorrectnessTest(arr, size, 1, 0, 0);
 
     //sleep to refresh the random number generator engine's seed
-    //this_thread::sleep_for(chrono::milliseconds(1000));
+    this_thread::sleep_for(chrono::milliseconds(1000));
     CorrectnessTest(arr, size, 2, -100, 100);
     CorrectnessTest(arr, size, 2, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 2, INT_MAX, INT_MAX);
     CorrectnessTest(arr, size, 2, 0, 0);
     */
-
-    pc.CountClear();
-    PerfTest(arr, size, 0, 0, 100);
-    PrintArray(arr,size);
+    //PrintArray(arr, size);
+    // PerfTest(arr, size, 0, -10000, 10000);
+    //PerfTest(arr, size, 1, INT_MIN,INT_MAX);
+    cout << "Array size: 1000000" << endl;
+    PerfTest(arr, size, 2, INT_MIN, INT_MAX);
     //RandListGen(arr, size, INT_MIN, INT_MAX);
-    //MergeSort(arr, size, 0, size - 1);
-    //cout << "OK" << endl;
-    PerfTest(arr, size, 1, -10000, 10000);
+    /*
+    auto start = chrono::system_clock::now();
+    sort(arr, arr + size);
+    auto end = chrono::system_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
+    cout << endl << "STL sort\nTime elapsed: " << duration.count() << " us.\t" << endl;
+    */
     //PerfTest(arr, size, 2, INT_MIN, INT_MAX);
 }

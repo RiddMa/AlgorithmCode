@@ -2,6 +2,7 @@
 // Created by 马嘉骥 on 2020/9/28.
 //
 #undef _HAS_STD_BYTE
+
 #include "Header/MergeSort.h"
 
 extern PerfCounter pc;
@@ -9,10 +10,10 @@ extern PerfCounter pc;
 // Merges two subarrays of arr[].
 // First subarray is arr[left..mid]
 // Second subarray is arr[mid+1..right]
-void Merge(int *arr, int left, int mid, int right) {
-    int i, j, k;
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+void Merge(int *arr, long long left, long long mid, long long right) {
+    long long i, j, k;
+    long long n1 = mid - left + 1;
+    long long n2 = right - mid;
 
     /* create temp arrays */
     int L[n1], R[n2];
@@ -61,11 +62,11 @@ void Merge(int *arr, int left, int mid, int right) {
 
 /* left is for left index and right is right index of the
    sub-array of arr to be sorted */
-void MergePass(int *arr, int left, int right) {
+void MergePass(int *arr, long long left, long long right) {
     if (left < right) {
         // Same as (left+right)/2, but avoids overflow for
         // large left and h
-        int mid = left + (right - left) / 2;
+        long long mid = left + (right - left) / 2;
 
         // Sort first and second halves
         MergePass(arr, left, mid);
@@ -75,6 +76,6 @@ void MergePass(int *arr, int left, int right) {
     }
 }
 
-void MergeSort(int *arr, long long size, int left, int right) {
+void MergeSort(int *arr, long long size, long long left, long long right) {
     MergePass(arr, 0, size);
 }
