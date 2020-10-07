@@ -12,6 +12,6 @@
 
 using namespace std;
 
-void MergeSort(int *arr, long long size, long long left, long long right);
+void MergeSort(int *arr, long long size);
 
 #endif //FINALTEST_MERGESORT_H

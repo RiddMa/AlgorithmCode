@@ -45,7 +45,7 @@ void CorrectnessTest(int *arr, const long long size, int method, int lower, int 
             break;
         }
         case 1: {
-            MergeSort(sortedArr, size, 0, size - 1);
+            MergeSort(sortedArr, size);
             cout << "Merge sorted array:" << endl;
             break;
         }
@@ -58,9 +58,14 @@ void CorrectnessTest(int *arr, const long long size, int method, int lower, int 
     PrintArray(sortedArr, size);
 
     //check if sort is correct
+    int *correctArr = new int[size];
+    for (long long i = 0; i < size; i++) {
+        correctArr[i] = arr[i];
+    }
+    sort(correctArr,correctArr+size);
     int flag = 1;
-    for (long long i = 0; i < size - 1; i++) {
-        if (sortedArr[i] > sortedArr[i + 1])
+    for (long long i = 0; i < size; i++) {
+        if (sortedArr[i] != correctArr[i])
             flag = 0;
     }
     if (flag == 1)
@@ -73,18 +78,19 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
     RandListGen(arr, size, lower, upper);
     extern PerfCounter pc;
     int *sortedArr = new int[size];
+
     for (long long i = 0; i < size; i++) {
         sortedArr[i] = arr[i];
     }
-    pc.CountClear();
 
+    pc.CountClear();
     auto start = chrono::system_clock::now();
     switch (method) {
         case 0:
             InsertionSort(sortedArr, size);
             break;
         case 1:
-            MergeSort(sortedArr, size, 0, size - 1);
+            MergeSort(sortedArr, size);
             break;
         case 2:
             QuickSort(sortedArr, size, 0, size - 1);
@@ -92,6 +98,7 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
     }
     auto end = chrono::system_clock::now();
     auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
+
     switch (method) {
         case 0:
             cout << "Insertion sort finished" << endl;
@@ -103,7 +110,6 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
             cout << "Quick sort finished" << endl;
             break;
     }
-
     cout << "Time elapsed: " << duration.count() << " us.\t" << endl;
     cout << "Compare times: " << pc.GetCount() << "\tMove times: " << pc.GetMove() << endl;
 }
@@ -111,9 +117,10 @@ void PerfTest(int *arr, long long size, int method, int lower, int upper) {
 PerfCounter pc;
 
 int main() {
-    long long size = 1000000;
+
+    long long size = 7;
     int *arr = new int[size];
-    /*
+
     CorrectnessTest(arr, size, 0, -100, 100);
     CorrectnessTest(arr, size, 0, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 0, INT_MAX, INT_MAX);
@@ -132,19 +139,38 @@ int main() {
     CorrectnessTest(arr, size, 2, INT_MIN, INT_MIN);
     CorrectnessTest(arr, size, 2, INT_MAX, INT_MAX);
     CorrectnessTest(arr, size, 2, 0, 0);
-    */
-    //PrintArray(arr, size);
-    // PerfTest(arr, size, 0, -10000, 10000);
-    //PerfTest(arr, size, 1, INT_MIN,INT_MAX);
-    cout << "Array size: 1000000" << endl;
+
+    delete[] arr;
+    size = 1000;
+    arr = new int[size];
+    cout << "Array size: " << size << endl;
+    PerfTest(arr, size, 0, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 1, INT_MIN, INT_MAX);
     PerfTest(arr, size, 2, INT_MIN, INT_MAX);
-    //RandListGen(arr, size, INT_MIN, INT_MAX);
+
+    delete[] arr;
+    size = 10000;
+    arr = new int[size];
+    cout << "Array size: " << size << endl;
+    PerfTest(arr, size, 0, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 1, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 2, INT_MIN, INT_MAX);
+
+    delete[] arr;
+    size = 100000;
+    arr = new int[size];
+    cout << "Array size: " << size << endl;
+    PerfTest(arr, size, 0, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 1, INT_MIN, INT_MAX);
+    PerfTest(arr, size, 2, INT_MIN, INT_MAX);
     /*
+
     auto start = chrono::system_clock::now();
     sort(arr, arr + size);
     auto end = chrono::system_clock::now();
     auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
     cout << endl << "STL sort\nTime elapsed: " << duration.count() << " us.\t" << endl;
-    */
+
     //PerfTest(arr, size, 2, INT_MIN, INT_MAX);
+    */
 }

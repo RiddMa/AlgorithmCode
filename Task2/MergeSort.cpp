@@ -76,6 +76,6 @@ void MergePass(int *arr, long long left, long long right) {
     }
 }
 
-void MergeSort(int *arr, long long size, long long left, long long right) {
-    MergePass(arr, 0, size);
+void MergeSort(int *arr, long long size) {
+    MergePass(arr, 0, size - 1);
 }
