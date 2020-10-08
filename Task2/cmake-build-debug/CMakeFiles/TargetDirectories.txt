@@ -1,0 +1,3 @@
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/cmake-build-debug/CMakeFiles/TSK2.dir
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/cmake-build-debug/CMakeFiles/edit_cache.dir
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

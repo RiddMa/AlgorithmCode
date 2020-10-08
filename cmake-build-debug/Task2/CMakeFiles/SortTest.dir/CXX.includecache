@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/InsertSort.h
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/MergeSort.h
+iostream
+-
+ctime
+-
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/QuickSort.h
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/SortTest.cpp
+SortTest.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/SortTest.h
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/SortTest.h
+InsertSort.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/InsertSort.h
+MergeSort.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/MergeSort.h
+QuickSort.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task2/QuickSort.h
+
