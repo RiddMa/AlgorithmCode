@@ -6,12 +6,14 @@
  * 分区完成后，将pivot元素的index与k比较，并根据大小访问其中一边的分区，再递归地对该分区选择pivot并进行分区。
  */
 
-#include <ctime>
-#include <cstdlib>
 #include "QuickSelect.h"
-int RandomizedPartition(int left, int right)
+
+long long RandomizedPartition(long long left, long long right)
 {
-    srand(time(NULL));
+    default_random_engine e;
+    uniform_int_distribution<long long> u(left, right);
+    e.seed(time(nullptr));
+    long long pi = u(e);
     return rand()%(right-left)+left;
 }
 
@@ -19,9 +21,9 @@ int RandomizedPartition(int left, int right)
  * 快速选择算法，与快速排序类似，但每次抛弃pivot的一侧元素
  */
 template<class Type>
-Type QuickSelect(Type Source[], int left, int right, int k)
+Type QuickSelect(Type Source[], long long left, long long right, long long k)
 {
     if(left==right)return Source[left];
-    int x = RandomizedPartition(left, right);
+    long long x = RandomizedPartition(left, right);
 
 }

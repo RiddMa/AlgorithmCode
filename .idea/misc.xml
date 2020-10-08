@@ -9,7 +9,6 @@
     </sourceRoots>
     <excludeRoots>
       <file path="$PROJECT_DIR$/Task1" />
-      <file path="$PROJECT_DIR$/Task2/Result" />
     </excludeRoots>
   </component>
 </project>
