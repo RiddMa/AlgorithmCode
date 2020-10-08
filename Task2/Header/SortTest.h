@@ -26,8 +26,6 @@
 
 #endif // _WIN32
 
-using namespace std;
-
 /*
  * Utility functions
  */

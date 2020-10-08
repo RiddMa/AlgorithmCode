@@ -10,8 +10,6 @@
 #include <iostream>
 #include "SortTest.h"
 
-using namespace std;
-
 void InsertionSort(int *arr, long long SIZE);
 
 #endif //FINALTEST_INSERTIONSORT_H

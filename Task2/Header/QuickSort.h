@@ -10,8 +10,6 @@
 #include <iostream>
 #include "SortTest.h"
 
-using namespace std;
-
 void QuickSort(int *arr, long long size, long long left, long long right);
 
 #endif //FINALTEST_QUICKSORT_H

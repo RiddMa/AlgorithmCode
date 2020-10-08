@@ -1,7 +1,6 @@
 //
 // Created by 马嘉骥 on 2020/9/28.
 //
-#undef _HAS_STD_BYTE
 
 #include "Header/MergeSort.h"
 
@@ -16,7 +15,8 @@ void Merge(int *arr, long long left, long long mid, long long right) {
     long long n2 = right - mid;
 
     /* create temp arrays */
-    int L[n1], R[n2];
+    int *L = new int[n1];
+    int *R = new int[n2];
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
         L[i] = arr[left + i];
