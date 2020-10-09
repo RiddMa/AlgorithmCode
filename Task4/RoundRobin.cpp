@@ -19,17 +19,70 @@
  * 回过头来从子问题构造母问题，采取先横向构造、再纵向构造的方法，有两种情况
  *
  * 子问题是偶数，开开心心地正常构造
- * 子问题是奇数，由于之前我们扩充了一个虚拟选手使得问题变为了偶数个选手，这时候我们需要把这个虚拟选手清除，并且把所有与他比赛的人，相应的位置编号由m+1变为0，表示这天没有比赛（原本和不存在的人比赛那当然相当于没有比赛了）
+ * 子问题是奇数，由于之前我们扩充了一个虚拟选手使得问题变为了偶数个选手，这时候我们需要把这个虚拟选手清除，并且把所有与他比赛的人，
+ * 相应的位置编号由m+1变为0，表示这天没有比赛（原本和不存在的人比赛那当然相当于没有比赛了）
  *
  * 重复以上的构造方法，直到问题恢复到n的规模，此时问题解决完毕
  */
 
 #include "RoundRobin.h"
 
-void Merge(int playerNum, int **table) {
+void Merge(int playerNum, std::vector<std::vector<int>> &table) {
+    int halfPlayerNum = (int) ceil(playerNum / 2.0);
+    int daysTotal = playerNum % 2 == 0 ? playerNum - 1 : playerNum;
+    int daysMerged = halfPlayerNum % 2 == 0 ? halfPlayerNum - 1 : halfPlayerNum;
+    // construct schedule table for the last half player from the first day to daysMerged st day
+    for (int i = 0; i < halfPlayerNum; i++) {
+        for (int j = 1; j <= daysMerged; j++) {
+            if (table[i][j] != 0) {
+                // if player i has rival on day j, let player (i + hPN) play with (i's rival number + hPN)th player
+                table[i + halfPlayerNum][j] = table[i][j] + halfPlayerNum;
+            } else {
+                // if player i has no rival on day j, let i and (i + hPN) be rivals
+                table[i][j] = i + halfPlayerNum;
+                table[i + halfPlayerNum][j] = i;
+            }
+        }
+    }
 
+    int oddFlag = 0;
+    if (table[1][daysMerged] == halfPlayerNum + 1) {
+        oddFlag = 1;
+    }
+    // /////////////
+
+
+    for (int j = daysMerged + 1; j <= daysTotal; j++) {
+        table[1][j] = table[1][j - daysMerged] + 1;
+        table[j][table[j][1]] = 1;
+    }
+
+    for (int i = daysMerged + 1; i <= daysTotal; i++) {
+        for (int j = 2; j <= halfPlayerNum; j++) {
+            int rival = halfPlayerNum + 1 + (table[i][1] - (halfPlayerNum + 1) + (j - 1)) % halfPlayerNum;
+            table[i][j] = rival;
+            table[i][rival] = j;
+        }
+    }
+
+    //check if player number is odd, if is,
+    if (playerNum % 2 == 1) {//符号"&"是按位与的意思，即将n转变为二进制，之后再和1按位与，显然当n为奇数的时候表达式为1，否则为0
+        for (int i = 1; i <= daysTotal; i++) {
+            for (int j = 1; j <= playerNum; j++) {
+                if (table[i][j] == playerNum + 1)
+                    table[i][j] = 0;
+            }
+        }
+    }
 }
 
-void tournament(int playerNum, int **table) {
-
+void Schedule(int playerNum, std::vector<std::vector<int>> &table) {
+    if (playerNum == 2) {
+        table[0][1] = 2;
+        table[1][1] = 1;
+    } else {
+        //if playerNum>2, solve problem n = ceil(playerNum/2.0), if n still>2, continue splitting until n == 2
+        Schedule((int) ceil(playerNum / 2.0), table);
+        Merge(playerNum, table);
+    }
 }

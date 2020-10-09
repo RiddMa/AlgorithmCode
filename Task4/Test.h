@@ -13,6 +13,7 @@
 #include <thread>
 #include <functional>
 #include <climits>
+#include <vector>
 
 #include "RoundRobin.h"
 
