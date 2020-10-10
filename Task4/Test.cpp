@@ -4,37 +4,40 @@
 
 #include "Test.h"
 
-void Show_Result(int playerNum, int **table)//将结果按行（即按天）输出到文件中
-{
-
+void Show_Result(int playerNum, std::vector<std::vector<int>> &table) {
     std::cout << "The tournament shall be arranged as follow:" << std::endl;
-    int daysTotal = daysTotal = playerNum % 2 == 0 ? playerNum : playerNum - 1;
-    std::cout << "选手编号: ";
+    int daysTotal = daysTotal = playerNum % 2 == 0 ? playerNum - 1 : playerNum;
     for (int i = 0; i <= daysTotal; i++) {
-        if (i)
-            std::cout << i;
-        for (int j = 1; j <= playerNum; j++) {
-            if (!i)
-                table[0][j] = j;
-            std::cout << table[i][j];
+        for (int j = 0; j <= playerNum; j++) {
+            if (i == 0 && j == 0) {
+                std::cout.setf(std::ios::left);
+                std::cout.width(15);
+                std::cout << "Player Number:" << std::cout.fill(' ');
+            } else if (j == 0) {
+                std::string day("Day:");
+                day.append(std::to_string(i));
+                std::cout.width(15);
+                std::cout << day << std::cout.fill(' ');
+            } else {
+                std::cout.width(5);
+                std::cout << table[j][i] << std::cout.fill(' ');
+            }
         }
         std::cout << std::endl;
     }
 }
 
 int main() {
-    int playerNum;
-    std::cout << "Please input the number of contestants:" << std::endl;
-    std::cin >> playerNum;
+    int playerNum(6);
     int duration = playerNum % 2 == 0 ? (playerNum - 1) : playerNum;
     //建立一个存储日程表的二维数组table，其中一行代表一天，从第一列开始每一列代表一个选手
     //即第i行j列表示第i天第j个选手的对手编号
-    std::vector<std::vector<int>> table(playerNum, std::vector<int>(duration + 1));
-    for (int i = 0; i < playerNum; i++) {
-        table[i][0] = i + 1;
+    std::vector<std::vector<int>> table(playerNum + 2, std::vector<int>(duration + 1));
+    for (int i = 1; i <= playerNum; i++) {
+        table[i][0] = i;
     }
 
     Schedule(playerNum, table);
-    //Show_Result(playerNum, table);//生成的循环赛表格输出到文件中
+    Show_Result(playerNum, table);
     return 0;
 }
