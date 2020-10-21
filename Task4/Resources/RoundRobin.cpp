@@ -25,7 +25,7 @@
  * 重复以上的构造方法，直到问题恢复到n的规模，此时问题解决完毕
  */
 
-#include "RoundRobin.h"
+#include "../Headers/RoundRobin.h"
 
 void Merge(int playerNum, std::vector<std::vector<int>> &table) {
     int halfPlayerNum = (int) ceil(playerNum / 2.0);
