@@ -29,5 +29,11 @@ int main() {
 
     std::cout << Res[ProdCount][Capacity] << std::endl;
 
+    std::vector<int> Res1(Capacity + 1, 0);
+
+    KnapsackN(ProdCount, Capacity, ArrWeight, ArrValue, Res1);
+
+    std::cout << Res[ProdCount][Capacity] << std::endl;
+
     return 0;
 }

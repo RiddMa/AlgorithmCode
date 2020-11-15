@@ -19,7 +19,13 @@ void Knapsack(int ProdCount, int Capacity, std::vector<int> &ArrWeight, std::vec
     }
 }
 
-void KnapsackSmall(int ProdCount, int Capacity, std::vector<int> &ArrWeight, std::vector<int> &ArrValue,
-                   std::vector<std::vector<int>> &Res) {
-
+void KnapsackN(int ProdCount, int Capacity, std::vector<int> &ArrWeight, std::vector<int> &ArrValue,
+               std::vector<int> &Res) {
+    for (int i = 1; i <= ProdCount; ++i) {
+        for (int j = Capacity; j >= ArrWeight[i]; --j) {
+            int value1 = Res[j - ArrWeight[i]] + ArrValue[i];// if take product i-1
+            int value2 = Res[j];// if don't take product i-1
+            Res[j] = value1 > value2 ? value1 : value2;// which one is better?
+        }
+    }
 }

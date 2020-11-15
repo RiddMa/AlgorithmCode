@@ -13,6 +13,14 @@ iostream
 -
 
 G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/main.h
+vector
+-
+iostream
+-
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/knapsack.cpp
+../Headers/knapsack.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/knapsack.h
 
 G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/main.cpp
 ../Headers/main.h
