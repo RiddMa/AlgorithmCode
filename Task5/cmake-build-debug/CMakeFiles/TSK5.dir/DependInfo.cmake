@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ridd/CLionProjects/AlgorithmCode/Task5/Resources/knapsack.cpp" "/Users/ridd/CLionProjects/AlgorithmCode/Task5/cmake-build-debug/CMakeFiles/TSK5.dir/Resources/knapsack.cpp.o"
-  "/Users/ridd/CLionProjects/AlgorithmCode/Task5/Resources/main.cpp" "/Users/ridd/CLionProjects/AlgorithmCode/Task5/cmake-build-debug/CMakeFiles/TSK5.dir/Resources/main.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+        "G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/knapsack.cpp" "G:/Courseware/Algorithm/AlgorithmFinal/Task5/cmake-build-debug/CMakeFiles/TSK5.dir/Resources/knapsack.cpp.obj"
+        "G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/main.cpp" "G:/Courseware/Algorithm/AlgorithmFinal/Task5/cmake-build-debug/CMakeFiles/TSK5.dir/Resources/main.cpp.obj"
+        "G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/test.cpp" "G:/Courseware/Algorithm/AlgorithmFinal/Task5/cmake-build-debug/CMakeFiles/TSK5.dir/Resources/test.cpp.obj"
+        )
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

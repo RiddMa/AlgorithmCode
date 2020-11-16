@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/knapsack.h
+vector
+-
+iostream
+-
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/test.h
+chrono
+-
+iostream
+-
+vector
+-
+random
+-
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Resources/test.cpp
+../Headers/test.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/test.h
+../Headers/knapsack.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task5/Headers/knapsack.h
+

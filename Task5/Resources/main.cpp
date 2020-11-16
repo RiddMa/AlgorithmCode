@@ -6,7 +6,10 @@
 
 #include "../Headers/knapsack.h"
 
+#include "../Headers/test.h"
+
 int main() {
+
     int ProdCount, Capacity;
     std::vector<int> ArrWeight(1, 0);
     std::vector<int> ArrValue(1, 0);
@@ -34,6 +37,10 @@ int main() {
     KnapsackN(ProdCount, Capacity, ArrWeight, ArrValue, Res1);
 
     std::cout << Res[ProdCount][Capacity] << std::endl;
+
+    PerfTest(1000, 100000, 0);
+
+    PerfTest(1000, 100000, 1);
 
     return 0;
 }
