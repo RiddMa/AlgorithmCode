@@ -29,3 +29,4 @@ void KnapsackN(int ProdCount, int Capacity, std::vector<int> &ArrWeight, std::ve
         }
     }
 }
+
