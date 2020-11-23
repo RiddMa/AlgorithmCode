@@ -55,25 +55,25 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.72/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7319.72/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
+RM = "/Users/ridd/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest
+CMAKE_SOURCE_DIR = /Users/ridd/CLionProjects/AlgorithmCode/Task5_Knapsack
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ridd/CLionProjects/AlgorithmCode/Task5_Knapsack/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TSK2.dir/all
+all: CMakeFiles/TSK5.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TSK2.dir/clean
+clean: CMakeFiles/TSK5.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TSK2.dir
+# Target rules for target CMakeFiles/TSK5.dir
 
 # All Build rule for target.
-CMakeFiles/TSK2.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target TSK2"
-.PHONY : CMakeFiles/TSK2.dir/all
+CMakeFiles/TSK5.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK5.dir/build.make CMakeFiles/TSK5.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK5.dir/build.make CMakeFiles/TSK5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ridd/CLionProjects/AlgorithmCode/Task5_Knapsack/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target TSK5"
+.PHONY : CMakeFiles/TSK5.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TSK2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TSK2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/TSK2.dir/rule
+CMakeFiles/TSK5.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/CLionProjects/AlgorithmCode/Task5_Knapsack/cmake-build-debug/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TSK5.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ridd/CLionProjects/AlgorithmCode/Task5_Knapsack/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/TSK5.dir/rule
 
 # Convenience name for target.
-TSK2: CMakeFiles/TSK2.dir/rule
+TSK5: CMakeFiles/TSK5.dir/rule
 
-.PHONY : TSK2
+.PHONY : TSK5
 
 # clean rule for target.
-CMakeFiles/TSK2.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK2.dir/build.make CMakeFiles/TSK2.dir/clean
-.PHONY : CMakeFiles/TSK2.dir/clean
+CMakeFiles/TSK5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSK5.dir/build.make CMakeFiles/TSK5.dir/clean
+.PHONY : CMakeFiles/TSK5.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
