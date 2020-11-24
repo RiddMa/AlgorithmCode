@@ -8,22 +8,20 @@
 
 #include "QuickSelect.h"
 
-long long RandomizedPartition(long long left, long long right)
-{
+long long RandomizedPartition(long long left, long long right) {
     default_random_engine e;
     uniform_int_distribution<long long> u(left, right);
     e.seed(time(nullptr));
     long long pi = u(e);
-    return rand()%(right-left)+left;
+    return rand() % (right - left) + left;
 }
 
 /*
  * 快速选择算法，与快速排序类似，但每次抛弃pivot的一侧元素
  */
 template<class Type>
-Type QuickSelect(Type Source[], long long left, long long right, long long k)
-{
-    if(left==right)return Source[left];
+Type QuickSelect(Type Source[], long long left, long long right, long long k) {
+    if (left == right)return Source[left];
     long long x = RandomizedPartition(left, right);
 
 }

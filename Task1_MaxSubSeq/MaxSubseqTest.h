@@ -4,6 +4,7 @@
 
 #ifndef FINALTEST_MAXSUBSEQTEST_H
 #define FINALTEST_MAXSUBSEQTEST_H
+
 #include<iostream>
 #include<Windows.h>
 //#include<profileapi.h>
@@ -11,11 +12,12 @@
 #include<functional>
 #include<stdlib.h>
 #include<ctime>
+
 using namespace std;
 
-typedef std::function<int(int*, int)> testFunc;
+typedef std::function<int(int *, int)> testFunc;
 
 
-int RandomListGen(int* A, int num, int range);
+int RandomListGen(int *A, int num, int range);
 
 #endif //FINALTEST_MAXSUBSEQTEST_H

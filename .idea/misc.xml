@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/Task5_Knapsack">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/Task6_Flower">
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/Task6_Flower/cmake-build-debug" />
     </sourceRoots>
   </component>
 </project>
