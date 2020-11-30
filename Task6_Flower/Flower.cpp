@@ -4,27 +4,39 @@
 
 #include "Flower.h"
 
-int Method[105][105];
-//int Solution[105];
-int flowerMax[105];
+#include <iostream>
+#include <algorithm>
 
-void flower(int flowerType, int flowerPot) {
-    cin >> flowerType >> flowerPot;
-    for (int i = 1; i <= flowerType; i++) {
-        cin >> flowerMax[i];
-    }
-    Method[0][0] = 1; // 不摆放花也是一种方案
-    // 花的种类
-    for (int i = 1; i <= flowerType; i++) {
-        // 花的朵数
-        for (int j = 0; j <= flowerPot; j++) {
-            // k从0开始表示不一定所有种类的花都要摆上
-            // 选择min（flowerMax[i], j）是因为第i种花一共只有a[i]盆，要够放
-            for (int k = 0; k <= min(flowerMax[i], j); k++) {
-                Method[i][j] = (Method[i][j] + Method[i - 1][j - k]) % 1000007;
+using namespace std;
+const int maxn = 100 + 5;
+const int INF = 0x3f3f3f3f;
+int a[maxn][maxn];
+int dp[maxn][maxn];
+int n, m;
 
+int main() {
+    while (cin >> n >> m) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++)
+                cin >> a[i][j], dp[i][j] = -INF;
+        }
+        for (int i = 0; i <= m; i++)
+            dp[0][i] = 0;
+
+        dp[1][1] = a[1][1];
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j <= m; j++) {
+                for (int k = 1; k < j; k++) {
+                    dp[i][j] = max(dp[i][j], dp[i - 1][k] + a[i][j]);
+                }
             }
         }
+        int ans = -INF;
+        for (int i = 1; i <= m; i++) {
+            ans = max(ans, dp[n][i]);
+        }
+        cout << ans << endl;
     }
-    cout << Method[flowerType][flowerPot] % 1000007 << endl;
+    return 0;
 }

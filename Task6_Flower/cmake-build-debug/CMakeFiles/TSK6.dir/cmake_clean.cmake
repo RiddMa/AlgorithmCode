@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TSK6.dir/Flower.cpp.o"
-  "TSK6"
+  "CMakeFiles/TSK6.dir/Flower.cpp.obj"
+  "TSK6.exe"
+  "TSK6.exe.manifest"
+  "TSK6.lib"
   "TSK6.pdb"
 )
 

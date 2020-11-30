@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ridd/CLionProjects/AlgorithmCode/Task6_Flower/Flower.cpp" "/Users/ridd/CLionProjects/AlgorithmCode/Task6_Flower/cmake-build-debug/CMakeFiles/TSK6.dir/Flower.cpp.o"
+  "G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.cpp" "G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/cmake-build-debug/CMakeFiles/TSK6.dir/Flower.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

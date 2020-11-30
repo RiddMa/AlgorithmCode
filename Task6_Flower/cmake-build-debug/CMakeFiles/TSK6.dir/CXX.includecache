@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/ridd/CLionProjects/AlgorithmCode/Task6_Flower/Flower.cpp
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.cpp
 Flower.h
-/Users/ridd/CLionProjects/AlgorithmCode/Task6_Flower/Flower.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.h
+iostream
+-
+algorithm
+-
 
-/Users/ridd/CLionProjects/AlgorithmCode/Task6_Flower/Flower.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.h
 algorithm
 -
 iostream

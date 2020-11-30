@@ -10,6 +10,5 @@
 
 using namespace std;
 
-void flower(int flowerType, int flowerPot);
 
 #endif //KNAPSACK_FLOWER_H
