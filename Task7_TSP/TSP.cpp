@@ -5,64 +5,56 @@
 
 using namespace std;
 
-const int INF = 0x3f3f3f;
-int n, cc = 0, bestc = INF;
-int **g;
-int *x, *bestx;
+const int INF = 0x7f7f7f;
+int n, curnCost = 0, bestCost = INF;
+int graph[4][4] = {
+        {INF, 30,  6,   4},
+        {30,  INF, 5,   10},
+        {6,   5,   INF, 20},
+        {4,   10,  20,  INF}};
+int *curnPath, *bestPath;
 
-void travel(int t) {
-    if (t == n) {
-        if (g[x[t - 1]][x[t]] != INF && g[x[t]][1] != INF &&
-            (cc + g[x[t - 1]][x[t]] + g[x[t]][1] < bestc || bestc == INF)) {
+void travel(int tier) {
+    if (tier == n) {
+        if (graph[curnPath[tier - 1]][curnPath[tier]] != INF && graph[curnPath[tier]][1] != INF &&
+            (curnCost + graph[curnPath[tier - 1]][curnPath[tier]] + graph[curnPath[tier]][1] < bestCost ||
+             bestCost == INF)) {
             for (int i = 0; i < n + 1; i++)
-                bestx[i] = x[i];
-            bestc = cc + g[x[t - 1]][x[t]] + g[x[t]][1];
+                bestPath[i] = curnPath[i];
+            bestCost = curnCost + graph[curnPath[tier - 1]][curnPath[tier]] + graph[curnPath[tier]][1];
         }
         return;
     }
 
-    for (int i = t; i < n; i++) {
-        if (g[x[t - 1]][x[i]] != INF && (cc + g[x[t - 1]][x[i]] < bestc
-                                         || bestc == INF)) {
-            swap(x[i], x[t]);
-            cc += g[x[t - 1]][x[t]];
-            travel(t + 1);
-            cc -= g[x[t - 1]][x[t]];
-            swap(x[i], x[t]);
+    for (int i = tier; i < n; i++) {
+        if (graph[curnPath[tier - 1]][curnPath[i]] != INF &&
+            (curnCost + graph[curnPath[tier - 1]][curnPath[i]] < bestCost
+             || bestCost == INF)) {
+            swap(curnPath[i], curnPath[tier]);
+            curnCost += graph[curnPath[tier - 1]][curnPath[tier]];
+            travel(tier + 1);
+            curnCost -= graph[curnPath[tier - 1]][curnPath[tier]];
+            swap(curnPath[i], curnPath[tier]);
         }
     }
 }
 
 void output() {
-    cout << bestc << endl;
-    cout << bestx[1];
+    cout << bestCost << endl;
+    cout << bestPath[1];
     for (int i = 2; i < n + 1; i++)
-        cout << " " << bestx[i];
-    cout << " " << bestx[1] << endl;
+        cout << " " << bestPath[i];
+    cout << " " << bestPath[1] << endl;
 }
 
 int main() {
-
     n = 4;
-    g = new int *[n + 1];
-    x = new int[n + 1];
-    bestx = new int[n + 1];
+    curnPath = new int[n + 1];
+    bestPath = new int[n + 1];
 
     for (int i = 0; i < n + 1; i++) {
-        g[i] = new int[n + 1];
-        x[i] = i;
-        for (int j = 0; j < n + 1; j++)
-            g[i][j] = INF;
+        curnPath[i] = i;
     }
-
-    g[1][2] = g[2][1] = 30;
-    g[1][3] = g[3][1] = 6;
-    g[1][4] = g[4][1] = 4;
-
-    g[2][3] = g[3][2] = 5;
-    g[2][4] = g[4][2] = 10;
-
-    g[3][4] = g[4][3] = 20;
 
     travel(2);
     output();
