@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/Task4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/3RoundRobin">
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
   <component name="CidrRootsConfiguration">
@@ -8,7 +8,8 @@
       <file path="$PROJECT_DIR$" />
     </sourceRoots>
     <excludeRoots>
-      <file path="$PROJECT_DIR$/Task1" />
+      <file path="$PROJECT_DIR$/1MaxSubSeq" />
+      <file path="$PROJECT_DIR$/2Sort/cmake-build-debug" />
     </excludeRoots>
   </component>
 </project>

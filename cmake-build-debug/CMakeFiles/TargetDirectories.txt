@@ -1,3 +1,0 @@
-/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ridd/Desktop/CourseWare/算法设计与分析/FinalTest/cmake-build-debug/CMakeFiles/TSK2.dir
