@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.cpp
+Flower.h
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.h
+iostream
+-
+algorithm
+-
+
+G:/Courseware/Algorithm/AlgorithmFinal/Task6_Flower/Flower.h
+algorithm
+-
+iostream
+-
+

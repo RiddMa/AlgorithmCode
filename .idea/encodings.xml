@@ -2,10 +2,17 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/3RoundRobin/RoundRobin.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/3RoundRobin/RoundRobin.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/3RoundRobin/Test.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/3RoundRobin/Test.h" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/Task4_RoundRobin/Headers/Driver.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Task4_RoundRobin/Headers/RoundRobin.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Task4_RoundRobin/Resources/Driver.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Task4_RoundRobin/Resources/RoundRobin.cpp" charset="GBK" />
+>>>>>>> d24869bf3a2a9f1ec0d067c674bc4878628a0d5c
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

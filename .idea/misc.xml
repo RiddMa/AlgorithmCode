@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/3RoundRobin">
+=======
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/Task7_TSP">
+>>>>>>> d24869bf3a2a9f1ec0d067c674bc4878628a0d5c
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/Task6_Flower/cmake-build-debug" />
     </sourceRoots>
+<<<<<<< HEAD
     <excludeRoots>
       <file path="$PROJECT_DIR$/1MaxSubSeq" />
       <file path="$PROJECT_DIR$/2Sort/cmake-build-debug" />
     </excludeRoots>
+=======
+>>>>>>> d24869bf3a2a9f1ec0d067c674bc4878628a0d5c
   </component>
 </project>
